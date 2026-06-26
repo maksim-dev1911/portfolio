@@ -19,6 +19,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@material-tailwind/html": "^2.2.2",
     "prettier": "^3.3.2",
+    "swiper": "^11.1.9",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },

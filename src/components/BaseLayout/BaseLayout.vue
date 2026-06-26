@@ -1,7 +1,11 @@
 <template>
-  <Header/>
-  <RouterView />
-  <Footer/>
+  <div class="flex flex-col min-h-[100vh]">
+    <Header/>
+    <main class="grow flex flex-col">
+      <RouterView/>
+    </main>
+    <Footer/>
+  </div>
 </template>
 
 <script lang="ts">

@@ -1,5 +1,8 @@
 {
   "files": [],
+  "include": [
+    "./src/interfaces"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"

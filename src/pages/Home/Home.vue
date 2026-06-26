@@ -1,26 +1,25 @@
 <template>
-  <div>
-    <div class="">
-      <p class="text-white text-3xl md:text-4xl max-w-3xl mt-4 font-bold">
-        Programming is like building
-        <span class="text-primary">sand castles</span>. Only locks sometimes
-        break at sea, but the program never
-        <span class="text-primary">does</span>.
-      </p>
+    <div class="text-white">
+      <Banner/>
+      <div class="mt-20 md:mt-52">
+        <TitleSection text="MY WORKS"/>
+        <MyWorks/>
+      </div>
     </div>
-    <div class="mt-32">
-      <p class="text-gray-400 font-about tracking-wide text-xs">- MY WORKS</p>
-      <MyWorks />
-    </div>
-  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script>
+import {defineComponent} from "vue";
 import MyWorks from "@/components/MyWorks/MyWorks.vue";
+import Progress from "@/components/Home/Progress.vue";
+import TitleSection from "@/components/Common/TitleSection.vue";
+import Banner from "@/components/Home/Banner.vue";
 
 export default defineComponent({
   components: {
+    Banner,
+    TitleSection,
+    Progress,
     MyWorks,
   },
 });
