@@ -21,8 +21,12 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>
-    <ProgressBar :progress="progress"/>
+  <div class="mt-8 flex flex-wrap gap-4">
+            <span v-for="tech in progress"
+                  :key="tech.title"
+                  class="rounded-full border border-white/10 bg-white/5 px-5 py-3 backdrop-blur">
+              {{ tech.title }}
+            </span>
   </div>
 </template>
 

@@ -1,7 +1,13 @@
+export type TechStackObj = {
+    title: string;
+}
+
 export interface IProject {
-    projectId: number
-    framework: string
-    title: string
-    image: string
-    iconImage: string
+    projectId: number;
+    category: string,
+    title: string;
+    description: string;
+    image: string;
+    techStack: Array<TechStackObj>;
+    linkToCode: string;
 }

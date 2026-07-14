@@ -1,55 +1,95 @@
 <template>
-  <div class="font-poppins pt-8 mb-20 md:flex justify-between md:py-10">
-    <div class="flex justify-between items-center">
-      <RouterLink to="/home" class="flex">
-        <p class="text-white font-bold text-2xl">Shve</p>
-        <p class="text-primary font-bold text-2xl">tso</p>
-        <p class="text-white font-bold text-2xl">v.</p>
+  <header class="relative z-50 font-poppins mb-10 pt-6 md:mb-16 md:pt-10">
+    <div class="flex items-center justify-between">
+      <RouterLink to="/home" class="flex text-2xl font-bold" @click="closeMenu">
+        <span class="text-white">Shve</span>
+        <span class="text-primary">tso</span>
+        <span class="text-white">v.</span>
       </RouterLink>
-      <div class="md:hidden">
-        <font-awesome-icon @click="menuOpen()" v-if="!open" size="lg" icon="fa-solid fa-bars" style="color: #5e3bee;"
-                           class=""/>
-        <font-awesome-icon @click="menuOpen()" v-if="open" size="xl" icon="fa-solid fa-xmark" style="color: #5e3bee;"
-                           class=""/>
-      </div>
-    </div>
-    <div class="mt-8 absolute top-14 md:flex gap-9 md:static" :class="[open ? 'block' : 'hidden']">
-      <div v-for="l in links" v-bind:key="l.title" class="mb-2 last:mb-0 flex text-white">
+
+      <nav class="hidden items-center gap-9 md:flex">
         <RouterLink
-            active-class="border-b-2 border-primary text-primary"
+            v-for="l in links"
+            :key="l.title"
             :to="l.link"
-        >{{ l.title }}
+            active-class="border-b-2 border-primary text-primary"
+            class="text-white transition hover:text-primary"
+        >
+          {{ l.title }}
         </RouterLink>
-      </div>
+      </nav>
+
+      <button
+          type="button"
+          class="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 md:hidden"
+          aria-label="Toggle menu"
+          @click="menuOpen"
+      >
+        <font-awesome-icon
+            :icon="open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"
+            size="lg"
+            style="color: #5e3bee"
+        />
+      </button>
     </div>
-  </div>
+
+    <Transition name="menu">
+      <nav
+          v-if="open"
+          class="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-[#15151C] p-3 shadow-[0_20px_60px_rgba(0,0,0,.45)] md:hidden"
+      >
+        <RouterLink
+            v-for="l in links"
+            :key="l.title"
+            :to="l.link"
+            active-class="bg-primary/15 text-primary"
+            class="mb-1 block rounded-xl px-4 py-3.5 text-base text-white last:mb-0 transition hover:bg-white/5"
+            @click="closeMenu"
+        >
+          {{ l.title }}
+        </RouterLink>
+      </nav>
+    </Transition>
+  </header>
 </template>
 
 <script lang="ts">
-import {defineComponent, ref} from "vue";
+import {defineComponent, ref, watch} from "vue";
+import {useRoute} from "vue-router";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import routes from "@/config/route";
 
 export default defineComponent({
   name: "Header",
   components: {FontAwesomeIcon},
-  data() {
-    return {
-      links: [
-        {link: routes.HOME, title: "Home"},
-        {link: routes.ABOUT, title: "About me"},
-        {link: routes.CONTACT, title: "Contact me"},
-      ],
-    };
-  },
   setup() {
-    let open = ref(true)
+    const route = useRoute();
+    const open = ref(false);
+
+    const links = [
+      {link: routes.HOME, title: "Home"},
+      {link: routes.ABOUT, title: "About me"},
+      {link: routes.CONTACT, title: "Contact me"},
+    ];
 
     function menuOpen() {
-      open.value = !open.value
+      open.value = !open.value;
     }
 
-    return {open, menuOpen}
-  }
+    function closeMenu() {
+      open.value = false;
+    }
+
+    watch(
+        () => route.fullPath,
+        () => closeMenu()
+    );
+
+    return {open, links, menuOpen, closeMenu};
+  },
 });
 </script>
+
+<style scoped>
+
+</style>

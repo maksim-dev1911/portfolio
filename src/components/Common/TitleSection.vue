@@ -11,7 +11,18 @@ export default defineComponent({
 </script>
 
 <template>
-  <p class="text-gray-400 font-about tracking-wide text-xs mb-6">- {{ text }}</p>
+  <p
+      class="
+    text-primary
+    uppercase
+    text-sm
+    font-semibold
+    tracking-[0.35em]
+    mb-4
+  "
+  >
+    - {{ text }}
+  </p>
 </template>
 
 <style scoped>

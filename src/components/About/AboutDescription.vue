@@ -1,57 +1,75 @@
-<script >
-
-import TitleSection from "@/components/Common/TitleSection.vue";
-import {defineComponent} from "vue";
-import Progress from "@/components/Home/Progress.vue";
-
-export default defineComponent({
-  components: {Progress, TitleSection}
-})
-</script>
-
 <template>
-  <div class="mt-12 lg:ml-24">
-    <TitleSection text="ABOUT"/>
-    <div class="flex text-3xl sm:text-5xl gap-2 font-bold mt-3">
-      <p class="text-white">Maksim</p>
-      <p class="text-primary">Shvetsov</p>
-    </div>
-    <div class="text-gray-600 mt-2 text-[17px]">
-      <p class="my-4">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only
-        five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with
-        the release of Letraset sheets containing Lorem Ipsum passages, and
-        more recently with desktop publishing software like Aldus PageMaker
-        including versions of Lorem Ipsum
-      </p>
-      <p class="my-4">
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It
-        has roots in a piece of classical Latin literature from 45 BC, making
-        it over 2000 years old.
-      </p>
-      <p>
-        There are many variations of passages of Lorem Ipsum available, but
-        the majority have suffered alteration in some form, by injected
-        humour, or randomised words which don't look even slightly believable.
-      </p>
-      <div class="mt-12">
-        <TitleSection text="SKILLS"/>
-        <Progress/>
+  <div class="w-full max-w-2xl">
+    <TitleSection text="ABOUT ME"/>
+
+    <h1 class="flex items-center gap-3 mt-3 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+      <span class="text-white">Maxim</span>
+      <span class="text-primary">Shvetsov</span>
+    </h1>
+
+    <p class="mt-6 text-base leading-7 text-zinc-300 sm:mt-8 sm:text-lg sm:leading-8">
+      Frontend Developer passionate about building modern, responsive, and
+      user-friendly web applications. I enjoy transforming ideas into clean,
+      scalable, and interactive interfaces with a strong focus on performance
+      and user experience.
+    </p>
+    <p class="mt-4 text-base leading-7 text-zinc-300 sm:mt-5 sm:text-lg sm:leading-8">
+      Experienced with React, Vue, TypeScript, Redux Toolkit, Tailwind CSS,
+      REST APIs, and modern frontend tooling. Always eager to learn new
+      technologies and contribute to meaningful projects.
+    </p>
+
+    <div class="mt-10 sm:mt-14">
+      <TitleSection text="TECH STACK"/>
+      <div class="mt-5 flex flex-wrap gap-2 sm:gap-3">
+        <span
+            v-for="tech in techStack"
+            :key="tech"
+            class="rounded-full border border-white/10 bg-white/5 px-3.5 py-2 text-sm text-zinc-300 sm:px-5 sm:py-3"
+        >
+          {{ tech }}
+        </span>
       </div>
-      <a href="">
-        <button
-            class="mt-8 select-none border border-white py-3 px-6 text-center transition-all align-middle font-sans text-xs text-white hover:bg-white hover:text-black">
-          VIEW CV
-        </button>
-      </a>
     </div>
+
+    <a
+        href="https://docs.google.com/document/d/19d5Lz_a14d7Eizjam3HddP9zbMEiSLi0z292Y9a0-bQ/edit?usp=sharing"
+        target="_blank"
+        rel="noreferrer"
+        class="mt-8 inline-flex sm:mt-10"
+    >
+      <span
+          class="rounded-2xl border border-white/10 bg-[#15151C] px-8 py-4 text-[14px] font-medium uppercase tracking-[0.15em] text-white transition hover:border-primary hover:bg-primary"
+      >
+        View CV
+      </span>
+    </a>
   </div>
 </template>
 
-<style scoped>
+<script lang="ts">
+import {defineComponent} from "vue";
+import TitleSection from "@/components/Common/TitleSection.vue";
 
-</style>
+export default defineComponent({
+  components: {TitleSection},
+  setup() {
+    const techStack = [
+      "⚛️ React",
+      "💚 Vue",
+      "🔷 TypeScript",
+      "🟨 JavaScript",
+      "🟦 Redux Toolkit",
+      "🔌 WebSocket",
+      "🧭 React Router",
+      "📨 Axios",
+      "🎨 Tailwind CSS",
+      "⚡ Vite",
+      "🌐 REST API",
+      "🌿 Git",
+    ];
+
+    return {techStack};
+  },
+});
+</script>

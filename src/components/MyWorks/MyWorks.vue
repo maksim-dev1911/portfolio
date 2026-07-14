@@ -1,48 +1,23 @@
 <template>
-  <div class="md:grid grid-cols-3 gap-10">
-    <div v-for="i in projectData()" class="mb-10 md:mb-0">
-      <Work :work="i"/>
-    </div>
+  <div class="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 md:gap-8">
+    <Work
+        v-for="(project, index) in projects"
+        :key="project.projectId"
+        :work="project"
+        :index="index"
+    />
   </div>
 </template>
-<script>
+
+<script lang="ts">
 import {defineComponent} from "vue";
-import {Swiper, SwiperSlide} from 'swiper/vue';
-import {Keyboard, Pagination, Navigation} from 'swiper/modules';
-
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import 'swiper/css';
-
 import Work from "@/components/MyWorks/Work.vue";
-import {projectData} from "@/data/projects.ts";
+import {projectData} from "@/data/projects";
 
 export default defineComponent({
-  components: {Work, Swiper, SwiperSlide},
-  methods: {
-    projectData() {
-      return projectData
-    }
-  },
+  components: {Work},
   setup() {
-    return {
-      modules: [Keyboard, Pagination, Navigation],
-    };
+    return {projects: projectData};
   },
 });
 </script>
-
-<style>
-.swiper-button-next {
-  color: #5E3BEE;
-}
-
-.swiper-button-prev {
-  color: #5E3BEE;
-}
-
-.swiper-pagination-bullet {
-  background-color: #5E3BEE;
-}
-
-</style>

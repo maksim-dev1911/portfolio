@@ -6,6 +6,7 @@ import About from "@/pages/About/About.vue";
 import Home from "@/pages/Home/Home.vue";
 import route from "@/config/route";
 import Project from "@/pages/ProjectDetails/ProjectDetails.vue";
+import Contact from "@/pages/Contact/Contact.vue";
 
 const routes = [
   {
@@ -23,6 +24,11 @@ const routes = [
         path: route.ABOUT,
         name: "About",
         component: About,
+      },
+      {
+        path: route.CONTACT,
+        name: "Contact",
+        component: Contact,
       },
       {
         path: route.HOME_PROJECT,

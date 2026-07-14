@@ -1,17 +1,16 @@
-<script >
+<script>
 import AboutDescription from "@/components/About/AboutDescription.vue";
 import AboutImage from "@/components/About/AboutImage.vue";
 import {defineComponent} from "vue";
 
 export default defineComponent({
-  components: {AboutImage, AboutDescription}
-})
-
+  components: {AboutImage, AboutDescription},
+});
 </script>
 
 <template>
-  <div class="lg:flex max-w-screen-3xl md:mx-auto px-4 xl:px-8 w-full">
+  <section class="mx-auto flex w-full max-w-6xl flex-col items-center gap-10 lg:flex-row lg:items-start lg:gap-20">
     <AboutImage/>
     <AboutDescription/>
-  </div>
+  </section>
 </template>
