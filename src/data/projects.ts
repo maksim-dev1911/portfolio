@@ -7,6 +7,26 @@ import type {IProject} from "@/interfaces/projects";
 export const projectData: IProject[] = [
     {
         projectId: 1,
+        category: 'Financial tracking platform',
+        title: 'Fin Track',
+        description: 'Fintrack is a modern financial platform designed to simplify the way individuals and businesses manage their finances. The platform provides secure, intuitive, and efficient digital financial solutions, bringing together payment services, expense tracking, financial analytics, and business management tools in one centralized web experience.',
+        image: finTruckImg,
+        techStack: [
+            {title: '⚛️ React'},
+            {title: '🔷 TypeScript'},
+            {title: '🌻 TanStack Query'},
+            {title: '🐻 Zustand'},
+            {title: '🚀 Axios'},
+            {title: '🛡️ React Hook Form + Zod'},
+            {title: '🧭 React Router'},
+            {title: '🎨 Tailwind CSS 4 + shadcn/ui'},
+            {title: '📊 Recharts'},
+            {title: '🌗next-themes'},
+        ],
+        linkToCode: 'https://github.com/maksim-dev1911/fin-track'
+    },
+    {
+        projectId: 2,
         category: 'Social Media Platform',
         title: 'Social Network',
         description: 'A modern social networking platform built with React and TypeScript. Users can create and edit profiles, publish posts, interact with other users, manage friends, and communicate through a real-time chat powered by WebSockets. The application features authentication, image uploads, responsive design, and a clean, intuitive user experience.',
@@ -25,20 +45,6 @@ export const projectData: IProject[] = [
         linkToCode: 'https://github.com/maksim-dev1911/SocialNetwork'
     },
     {
-        projectId: 2,
-        category: 'Product Landing Page',
-        title: 'Apple Landing',
-        description: 'A premium product landing page inspired by Apple\'s design philosophy. The project demonstrates responsive design, pixel-perfect implementation, smooth UI animations, and attention to visual detail using modern frontend technologies.',
-        image: appleLandingImg,
-        techStack: [
-            {title: '🌐 HTML5'},
-            {title: '🎨 SCSS'},
-            {title: '🟨 JavaScript'},
-            {title: '⚡ Vite'},
-        ],
-        linkToCode: 'https://github.com/maksim-dev1911/apple-landing'
-    },
-    {
         projectId: 3,
         category: 'Creative Agency Landing',
         title: 'Agency Landing Page',
@@ -53,15 +59,16 @@ export const projectData: IProject[] = [
     },
     {
         projectId: 4,
-        category: 'Coming Soon',
-        title: 'Fin Truck',
-        description: 'Fintruck is a modern financial platform designed to simplify the way individuals and businesses manage their finances. The platform provides secure, intuitive, and efficient digital financial solutions, bringing together payment services, expense tracking, financial analytics, and business management tools in one centralized web experience.',
-        image: finTruckImg,
+        category: 'Product Landing Page',
+        title: 'Apple Landing',
+        description: 'A premium product landing page inspired by Apple\'s design philosophy. The project demonstrates responsive design, pixel-perfect implementation, smooth UI animations, and attention to visual detail using modern frontend technologies.',
+        image: appleLandingImg,
         techStack: [
             {title: '🌐 HTML5'},
             {title: '🎨 SCSS'},
+            {title: '🟨 JavaScript'},
             {title: '⚡ Vite'},
         ],
-        linkToCode: 'https://github.com/maksim-dev1911/creative-agency-landing'
-    }
+        linkToCode: 'https://github.com/maksim-dev1911/apple-landing'
+    },
 ]

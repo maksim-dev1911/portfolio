@@ -14,7 +14,7 @@
       and user experience.
     </p>
     <p class="mt-4 text-base leading-7 text-zinc-300 sm:mt-5 sm:text-lg sm:leading-8">
-      Experienced with React, Vue, TypeScript, Redux Toolkit, Tailwind CSS,
+      Experienced with React, Vue, TypeScript, Redux Toolkit, TanStack Query, Zustand Tailwind CSS,
       REST APIs, and modern frontend tooling. Always eager to learn new
       technologies and contribute to meaningful projects.
     </p>
@@ -60,10 +60,13 @@ export default defineComponent({
       "🔷 TypeScript",
       "🟨 JavaScript",
       "🟦 Redux Toolkit",
+      '🌻 TanStack Query',
+      '🐻 Zustand',
       "🔌 WebSocket",
+      '🛡️ React Hook Form + Zod',
       "🧭 React Router",
       "📨 Axios",
-      "🎨 Tailwind CSS",
+      "🎨 Tailwind CSS 4 + shadcn/ui",
       "⚡ Vite",
       "🌐 REST API",
       "🌿 Git",

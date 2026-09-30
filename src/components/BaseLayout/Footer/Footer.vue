@@ -13,7 +13,7 @@
         <div v-if="s.point" class="h-[3px] w-[3px] rounded-full bg-primary"></div>
       </div>
     </div>
-    <p class="text-[13px]">© {{ realYears }} Maksim Shvetsov</p>
+    <p class="text-[13px]">© {{ realYears }} Maxim Shvetsov</p>
   </footer>
 </template>
 
@@ -29,7 +29,7 @@ export default defineComponent({
       social: [
         {href: "https://t.me/maks_shvetsov", image: telegramImg, point: true},
         {href: "https://www.instagram.com/maks.shvetsov__/", image: instagramImg, point: true},
-        {href: "https://t.me/maks_shvetsov", image: linkedin, point: false},
+        {href: "https://www.linkedin.com/in/max-shvetsov/", image: linkedin, point: false},
       ],
     };
   },
