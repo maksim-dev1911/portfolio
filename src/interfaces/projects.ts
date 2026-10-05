@@ -10,4 +10,5 @@ export interface IProject {
     image: string;
     techStack: Array<TechStackObj>;
     linkToCode: string;
+    linkToDemo: string;
 }

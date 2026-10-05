@@ -23,7 +23,8 @@ export const projectData: IProject[] = [
             {title: '📊 Recharts'},
             {title: '🌗next-themes'},
         ],
-        linkToCode: 'https://github.com/maksim-dev1911/fin-track'
+        linkToCode: 'https://github.com/maksim-dev1911/fin-track',
+        linkToDemo: 'https://fin-track-ecru-gamma.vercel.app/dashboard'
     },
     {
         projectId: 2,
@@ -42,7 +43,8 @@ export const projectData: IProject[] = [
             {title: '🧭 React Router'},
             {title: '📝 React Final Form'},
         ],
-        linkToCode: 'https://github.com/maksim-dev1911/SocialNetwork'
+        linkToCode: 'https://github.com/maksim-dev1911/SocialNetwork',
+        linkToDemo: 'https://fin-track-ecru-gamma.vercel.app/dashboard'
     },
     {
         projectId: 3,
@@ -55,7 +57,8 @@ export const projectData: IProject[] = [
             {title: '🎨 SCSS'},
             {title: '⚡ Vite'},
         ],
-        linkToCode: 'https://github.com/maksim-dev1911/creative-agency-landing'
+        linkToCode: 'https://github.com/maksim-dev1911/creative-agency-landing',
+        linkToDemo: 'https://fin-track-ecru-gamma.vercel.app/dashboard'
     },
     {
         projectId: 4,
@@ -69,6 +72,7 @@ export const projectData: IProject[] = [
             {title: '🟨 JavaScript'},
             {title: '⚡ Vite'},
         ],
-        linkToCode: 'https://github.com/maksim-dev1911/apple-landing'
+        linkToCode: 'https://github.com/maksim-dev1911/apple-landing',
+        linkToDemo: 'https://fin-track-ecru-gamma.vercel.app/dashboard'
     },
 ]
