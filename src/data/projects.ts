@@ -24,7 +24,8 @@ export const projectData: IProject[] = [
             {title: '🌗next-themes'},
         ],
         linkToCode: 'https://github.com/maksim-dev1911/fin-track',
-        linkToDemo: 'https://fin-track-ecru-gamma.vercel.app/dashboard'
+        linkToDemo: 'https://fin-track-ecru-gamma.vercel.app/dashboard',
+        demo: true
     },
     {
         projectId: 2,
@@ -44,7 +45,8 @@ export const projectData: IProject[] = [
             {title: '📝 React Final Form'},
         ],
         linkToCode: 'https://github.com/maksim-dev1911/SocialNetwork',
-        linkToDemo: 'https://fin-track-ecru-gamma.vercel.app/dashboard'
+        linkToDemo: '',
+        demo: false
     },
     {
         projectId: 3,
@@ -58,7 +60,8 @@ export const projectData: IProject[] = [
             {title: '⚡ Vite'},
         ],
         linkToCode: 'https://github.com/maksim-dev1911/creative-agency-landing',
-        linkToDemo: 'https://fin-track-ecru-gamma.vercel.app/dashboard'
+        linkToDemo: '',
+        demo: false
     },
     {
         projectId: 4,
@@ -73,6 +76,7 @@ export const projectData: IProject[] = [
             {title: '⚡ Vite'},
         ],
         linkToCode: 'https://github.com/maksim-dev1911/apple-landing',
-        linkToDemo: 'https://fin-track-ecru-gamma.vercel.app/dashboard'
+        linkToDemo: 'https://apple-landing-mu.vercel.app/',
+        demo: true
     },
 ]

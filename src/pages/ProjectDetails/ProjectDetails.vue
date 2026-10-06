@@ -82,7 +82,9 @@ export default defineComponent({
             </a>
             <a
                 class="rounded-full border cursor-pointer border-primary bg-primary/10 px-6 py-3.5 text-base shadow-[0_0_35px_rgba(124,58,237,.3)] transition hover:bg-primary/20 sm:px-8 sm:py-4 sm:text-lg"
+                v-if="project.demo"
                 :href="project.linkToDemo"
+
             >
               Live Demo
             </a>
