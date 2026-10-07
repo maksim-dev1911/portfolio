@@ -45,8 +45,8 @@ export const projectData: IProject[] = [
             {title: '📝 React Final Form'},
         ],
         linkToCode: 'https://github.com/maksim-dev1911/SocialNetwork',
-        linkToDemo: '',
-        demo: false
+        linkToDemo: 'https://social-network-umber-beta.vercel.app/',
+        demo: true
     },
     {
         projectId: 3,
